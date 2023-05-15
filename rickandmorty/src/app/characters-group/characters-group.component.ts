@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 
+import { CharacterListService } from '../character-list.service';
+
 @Component({
   selector: 'app-characters-group',
   templateUrl: './characters-group.component.html',
@@ -7,5 +9,13 @@ import { Component, Input } from '@angular/core';
 })
 export class CharactersGroupComponent {
 
-  @Input() characters:any;
+  characters: any = null;
+
+  constructor(private characterListService: CharacterListService) {}
+
+  ngOnInit() {
+    this.characterListService
+      .returnCharacters()
+      .subscribe((result) => (this.characters = result));
+  }
 }
