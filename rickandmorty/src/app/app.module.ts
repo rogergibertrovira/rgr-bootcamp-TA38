@@ -8,20 +8,20 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { CharacterCardComponent } from './character-card/character-card.component';
-import { CharactersComponent } from './characters/characters.component';
 import { CharactersGroupComponent } from './characters-group/characters-group.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { CharacterDetailsComponent } from './character-details/character-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationBarComponent,
     CharacterCardComponent,
-    CharactersComponent,
     CharactersGroupComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    CharacterDetailsComponent
   ],
   imports: [
     BrowserModule,

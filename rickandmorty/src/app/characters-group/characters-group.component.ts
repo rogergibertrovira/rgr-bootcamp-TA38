@@ -1,14 +1,13 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { CharacterListService } from '../character-list.service';
 
 @Component({
   selector: 'app-characters-group',
   templateUrl: './characters-group.component.html',
-  styleUrls: ['./characters-group.component.css']
+  styleUrls: ['./characters-group.component.css'],
 })
 export class CharactersGroupComponent {
-
   characters: any = null;
 
   constructor(private characterListService: CharacterListService) {}

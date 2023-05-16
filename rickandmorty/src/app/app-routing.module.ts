@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { CharactersComponent } from './characters/characters.component';
+import { CharactersGroupComponent } from './characters-group/characters-group.component';
 import { AboutComponent } from './about/about.component';
+import { CharacterDetailsComponent } from './character-details/character-details.component';
 
 const routes: Routes = [
   {
@@ -16,11 +17,15 @@ const routes: Routes = [
   },
   {
     path: 'characters',
-    component: CharactersComponent,
+    component: CharactersGroupComponent,
   },
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'character',
+    component: CharacterDetailsComponent,
   },
 ];
 

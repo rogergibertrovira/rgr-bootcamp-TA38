@@ -2,17 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CharacterDetailService {
+  constructor(private http: HttpClient) {}
 
-    constructor(private http: HttpClient) {}
+  returnCharacter(id: number) {
+    let query = 'https://rickandmortyapi.com/api/character/';
 
-    returnCharacter(index: number) {
-      let query = 'https://rickandmortyapi.com/api/character/';
+    query += id;
 
-      query += index;
-
-      return this.http.get(query);
-    }
+    return this.http.get(query);
+  }
 }

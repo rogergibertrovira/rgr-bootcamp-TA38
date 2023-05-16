@@ -1,0 +1,14 @@
+<div class="container box1" *ngIf="character != null; else wait">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+      <img src="{{ character.image }}" alt="{{ character.name }}" />
+    </div>
+    <div class="col-12 col-md-6">
+      <h1>{{ character.name }} - {{ character.status }}</h1>
+      <h3>{{ character.species }} - {{ character.gender }}</h3>
+      <h3>{{ character.origin.name }}</h3>
+      <h3>{{ character.location.name }}</h3>
+    </div>
+  </div>
+</div>
+<ng-template #wait>Waiting data...</ng-template>

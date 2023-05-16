@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { CharacterDetailService } from '../character-detail.service';
+
 @Component({
   selector: 'app-character-card',
   templateUrl: './character-card.component.html',
@@ -11,11 +13,10 @@ export class CharacterCardComponent {
   name = '';
   image = '';
 
-  constructor() {}
+  constructor(private characterDetailService: CharacterDetailService) {}
 
   ngOnInit(): void {
     this.name = this.character.name;
     this.image = this.character.image;
-    console.log(this.name);
   }
 }
