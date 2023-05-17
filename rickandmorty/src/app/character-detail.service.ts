@@ -5,7 +5,18 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class CharacterDetailService {
-  constructor(private http: HttpClient) {}
+  characterId;
+  constructor(private http: HttpClient) {
+    this.characterId = 0;
+  }
+
+  setCharacterId(id: number) {
+    this.characterId = id;
+  }
+
+  getCharacterId() {
+    return this.characterId;
+  }
 
   returnCharacter(id: number) {
     let query = 'https://rickandmortyapi.com/api/character/';

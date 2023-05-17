@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CharacterDetailService } from '../character-detail.service';
 
 @Component({
@@ -21,7 +21,7 @@ export class CharacterDetailsComponent {
 
   ngOnInit() {
     this.characterDetailService
-      .returnCharacter(1)
+      .returnCharacter(this.characterDetailService.getCharacterId())
       .subscribe((result) => (this.character = result));
   }
 }

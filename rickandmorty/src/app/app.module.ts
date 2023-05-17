@@ -12,6 +12,8 @@ import { CharactersGroupComponent } from './characters-group/characters-group.co
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
+import { CharacterListService } from './character-list.service';
+import { CharacterDetailService } from './character-detail.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import { CharacterDetailsComponent } from './character-details/character-details
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    CharacterListService,
+    CharacterDetailService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
